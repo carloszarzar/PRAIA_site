@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 7%;
+    --foreground: 0 0% 100%;
+    --card: 210 40% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 210 40% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 164 100% 39%;
+    --primary-foreground: 210 33% 7%;
+    --secondary: 210 33% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 30% 20%;
+    --muted-foreground: 215 16% 62%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 30% 20%;
+    --input: 210 30% 20%;
+    --ring: 164 100% 39%;
+    --radius: 0.625rem;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient-aqua {
+    background: linear-gradient(135deg, #00C9A7 0%, #5FEBD0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #00C9A7 0%, #8B5CF6 50%, #EC4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, #0A1628 0%, #0F2E4A 100%);
+  }
+
+  .border-gradient-brand {
+    border: 2px solid transparent;
+    background: linear-gradient(#0A1628, #0A1628) padding-box,
+                linear-gradient(135deg, #00C9A7, #8B5CF6) border-box;
+  }
+
+  .glow-aqua {
+    box-shadow: 0 0 20px rgba(0, 201, 167, 0.3), 0 0 60px rgba(0, 201, 167, 0.1);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 60px rgba(139, 92, 246, 0.1);
+  }
+}
