@@ -20,7 +20,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 opacity-40"
         style={{
-          backgroundImage: "url(/images/hero-bg.jpg)",
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-bg.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           transform: `translateY(${offset}px)`,
@@ -114,7 +114,7 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-[#00C9A7]/20 to-[#8B5CF6]/20 rounded-3xl blur-2xl" />
             <img
-              src="/images/hero-main.png"
+              src={`${import.meta.env.BASE_URL}images/hero-main.png`}
               alt="Controle total da sua fazenda aquícola com o app PRAIA"
               className="relative rounded-2xl border border-white/10 shadow-2xl w-full max-w-lg mx-auto"
             />
