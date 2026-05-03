@@ -3,7 +3,14 @@ import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Activity, TrendingUp, BarChart3, Wallet } from "lucide-react";
 
-const screens = ["/images/app-home.png", "/images/app-crescimento.png", "/images/app-financas.png", "/images/app-dfc.png", "/images/mockup-manejo.png", "/images/mockup-dfc.png"];
+const screens = [
+  `${import.meta.env.BASE_URL}images/app-home.png`,
+  `${import.meta.env.BASE_URL}images/app-crescimento.png`,
+  `${import.meta.env.BASE_URL}images/app-financas.png`,
+  `${import.meta.env.BASE_URL}images/app-dfc.png`,
+  `${import.meta.env.BASE_URL}images/mockup-manejo.png`,
+  `${import.meta.env.BASE_URL}images/mockup-dfc.png`
+];
 
 const features = [
   { icon: Activity, text: "Dashboard da fazenda com métricas em tempo real" },
@@ -24,6 +31,7 @@ const screenAlts = [
 export default function Technology() {
   const { ref, isVisible } = useScrollAnimation();
   const [currentScreen, setCurrentScreen] = useState(0);
+  const base = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const interval = setInterval(() => {
